@@ -15,7 +15,7 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(nameList) {
-  return nameList[nameList.length -1] + ', ' + nameList[0];
+  return nameList[nameList.length - 1] + ', ' + nameList[0];
 }
 
 // Desafio 5
@@ -44,15 +44,28 @@ function catAndMouse(mouse, cat1, cat2) {
   let distanceMouseCat2 = Math.abs(mouse - cat2);
   if (distanceMouseCat1 < distanceMouseCat2) {
     return 'cat1';
-  } else if (distanceMouseCat1 > distanceMouseCat2) {
+  }
+  if (distanceMouseCat1 > distanceMouseCat2) {
     return 'cat2';
   }
   return 'os gatos trombam e o rato foge';
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(numberList) {
+  let fizzBuzzArray = [];
+  for (let index = 0; index < numberList.length; index += 1) {
+    if (numberList[index] % 3 === 0 && numberList[index] % 5 === 0) {
+      fizzBuzzArray.push('fizzBuzz');
+    } else if (numberList[index] % 3 === 0) {
+      fizzBuzzArray.push('fizz');
+    } else if (numberList[index] % 5 === 0) {
+      fizzBuzzArray.push('buzz');
+    } else {
+      fizzBuzzArray.push('bug!');
+    }
+  }
+  return fizzBuzzArray;
 }
 
 // Desafio 9
