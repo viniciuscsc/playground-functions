@@ -69,11 +69,49 @@ function fizzBuzz(numberList) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  for (let index = 0; index < string.length; index += 1) {
+    switch (string[index]) {
+      case 'a':
+        string = string.replace('a', '1');
+        break;
+      case 'e':
+        string = string.replace('e', '2');
+        break;
+      case 'i':
+        string = string.replace('i', '3');
+        break;
+      case 'o':
+        string = string.replace('o', '4');
+        break;
+      case 'u':
+        string = string.replace('u', '5');
+        break;
+    }
+  }
+  return string;
 }
-function decode() {
-  // seu código aqui
+function decode(string) {
+  for (let index = 0; index < string.length; index += 1) {
+    switch (string[index]) {
+      case '1':
+        string = string.replace('1', 'a');
+        break;
+      case '2':
+        string = string.replace('2', 'e');
+        break;
+      case '3':
+        string = string.replace('3', 'i');
+        break;
+      case '4':
+        string = string.replace('4', 'o');
+        break;
+      case '5':
+        string = string.replace('5', 'u');
+        break;
+    }
+  }
+  return string;
 }
 
 // Desafio 10
