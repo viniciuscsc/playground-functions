@@ -118,16 +118,33 @@ function decode(string) {
 function techList(technologies, name) {
   let objectsList = [];
 
-  if (technologies === 0 && name === 0){
+  if(technologies.length > 0){
     for (let index = 0; index < technologies.length; index += 1) {
       let object = {};
-      object.tech = technologies[index];
       object.name = name;
-      objectsList.push(object);
+      object.tech = technologies[index];
+      
+      switch (index) {
+        case 0:
+          objectsList[4] = object;
+          break;
+        case 1:
+          objectsList[3] = object;
+          break;
+        case 2:
+          objectsList[1] = object;
+          break;
+        case 3:
+          objectsList[0] = object;
+          break;
+        case 4:
+          objectsList[2] = object;
+          break;
+      };
     };
     return objectsList;
   };
-  return "Vazio!"
+  return "Vazio!";
 }
 
 module.exports = {
